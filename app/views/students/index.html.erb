@@ -1,0 +1,24 @@
+<h1>this is the student's list</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>age</th>
+            <th>Address</th>
+            <th colspan="3">View</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @students.each do |stud|%>
+        <tr>
+            <td><%= stud.name %></td>
+            <td><%= stud.age %></td>
+            <td><%= stud.address %></td>
+            <td><%= link_to 'Show', stud %></td>
+            <td><%= link_to 'Update', edit_student_path(stud) %></td>
+        </tr>
+        
+        <% end %>
+    </tbody>
+</table>
